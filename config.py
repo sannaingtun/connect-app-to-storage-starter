@@ -1,6 +1,16 @@
 import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 
+# Set environment variables
+os.environ.get('SECRET_KEY') = ''
+os.environ.get('SQL_SERVER') = 'virtualzoo.database.windows.net'
+os.environ.get('SQL_DATABASE') = 'virtualzoo'
+os.environ.get('SQL_USER_NAME') = 'useradmin'
+os.environ.get('SQL_PASSWORD') = 'adminadmin123!'
+os.environ.get('BLOB_ACCOUNT') = 'virtualzoo'
+os.environ.get('BLOB_STORAGE_KEY') = 'GcsmRueXoxsODcceqx/4M+jzOyE+opoLVpPcA0z1uVPJJCNRzlBzc6d0JjcKi5h0FHcE7l4Vzw2uFwZkQmzQcg=='
+os.environ.get('BLOB_CONTAINER') = 'images'
+
 class Config(object):
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'secret-key'
 
